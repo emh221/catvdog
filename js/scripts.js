@@ -18,4 +18,18 @@ $(function(){
     $("ul#doglist").prepend("<li>You never do nothing!</li>");
     $("ul#catlist").prepend("<li>I stay warm, fat, and asleep; who's the idiot??</li>");
   });
+
+  $("button#catpicbutton").click(function(){
+    $("button#catpicbutton").after("<img id='catphoto' src='img/cat.jpg' alt='A picture of a cat'>");
+  $("img#catphoto").click(function(){
+      $(this).remove();
+    });
+  });
+
+  $("button#dogpicbutton").click(function(){
+    $("button#dogpicbutton").after("<img id='dogphoto' src='img/dog.jpg' alt='A picture of a dog'>");
+    $("img#dogphoto").click(function(){
+        $(this).remove();
+      });
+  });
 });
